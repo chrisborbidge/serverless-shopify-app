@@ -4,6 +4,7 @@ exports.handler = async (event, context) => {
   const shop = event.queryStringParameters.shop
   const path_prefix = event.queryStringParameters.path_prefix
   const timestamp = event.queryStringParameters.timestamp
+  const signature = event.queryStringParameters.signature
 
   if (shop && path_prefix && timestamp) {
     const map = { shop, path_prefix, timestamp }
