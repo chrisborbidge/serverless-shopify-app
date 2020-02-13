@@ -11,13 +11,12 @@ exports.handler = async (event, context) => {
     const map = { path_prefix, shop, timestamp }
     const message = querystring.stringify(map)
     console.log(message)
-    const providedHmac = Buffer.from(signature, 'utf-8')
+    const providedHmac = Buffer.from(signature)
     const generatedHash = Buffer.from(
       crypto
         .createHmac('sha256', apiSecret)
         .update(message)
-        .digest('hex'),
-      'utf-8'
+        .digest('hex')
     )
 
     let hashEquals = false
