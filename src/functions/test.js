@@ -4,13 +4,17 @@ const querystring = require("querystring")
 
 exports.handler = async (event, context) => {
   const params = event.queryStringParameters
-  const { shop, path_prefix, timestamp, signature } = event.queryStringParameters
+  const signature = event.queryStringParameters.signature
   const apiSecret = process.env.SHOPIFY_API_SECRET
 
   if (signature) {
-    const map = { path_prefix, shop, timestamp }
-    const message = map.split('&').join('')
-    console.log(message)
+    var parameters = [];
+    for (var key in params) {
+      if (key != 'signature') {
+        parameters.push(key + '=' + query[key])
+      }
+    }
+    var message = parameters.sort().join('');
     const providedHmac = Buffer.from(signature)
     const generatedHash = Buffer.from(
       crypto
