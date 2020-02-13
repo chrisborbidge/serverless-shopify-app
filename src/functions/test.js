@@ -47,5 +47,10 @@ exports.handler = async (event, context) => {
         params: params
       })
     }
+  } else {
+    return {
+      statusCode: 400,
+      body: "Required parameters missing"
+    }
   }
 }
