@@ -1,6 +1,6 @@
 const crypto = require("crypto")
 const querystring = require("querystring")
-const fetch = require("isomorphic-fetch")
+const fetch = require("node-fetch")
 const Account = require("./models/account")
 
 exports.handler = async (event, context) => {
