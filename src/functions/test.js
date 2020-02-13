@@ -3,11 +3,14 @@ const crypto = require("crypto")
 const querystring = require("querystring")
 
 exports.handler = async (event, context) => {
+  const params = event.queryStringParameters
   const shop = event.queryStringParameters.shop
   const path_prefix = event.queryStringParameters.path_prefix
   const timestamp = event.queryStringParameters.timestamp
   const signature = event.queryStringParameters.signature
   const apiSecret = process.env.SHOPIFY_API_SECRET
+
+  console.log(params)
 
   if (shop && path_prefix && timestamp) {
     const map = { shop, path_prefix, timestamp }
