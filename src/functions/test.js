@@ -1,10 +1,13 @@
+require('dotenv').config()
 const crypto = require("crypto")
 const querystring = require("querystring")
+
 exports.handler = async (event, context) => {
   const shop = event.queryStringParameters.shop
   const path_prefix = event.queryStringParameters.path_prefix
   const timestamp = event.queryStringParameters.timestamp
   const signature = event.queryStringParameters.signature
+  const apiSecret = process.env.SHOPIFY_API_SECRET
 
   if (shop && path_prefix && timestamp) {
     const map = { shop, path_prefix, timestamp }

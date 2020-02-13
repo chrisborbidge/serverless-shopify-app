@@ -17,8 +17,8 @@ exports.handler = async (event, context) => {
         .createHmac('sha256', apiSecret)
         .update(message)
         .digest('hex'),
-        'utf-8'
-      )
+      'utf-8'
+    )
 
     let hashEquals = false
 

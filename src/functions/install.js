@@ -1,9 +1,10 @@
 require('dotenv').config()
+
 exports.handler = async (event, context) => {
   const shop = event.queryStringParameters.shop
   const redirectUri = event.queryStringParameters.redirect
   const apiKey = process.env.SHOPIFY_API_KEY
-  const scopes="read_content,write_content,read_products,read_themes,write_themes"
+  const scopes = "read_content,write_content,read_products,read_themes,write_themes"
 
   if (shop) {
     const installUrl = 'https://' + shop +
