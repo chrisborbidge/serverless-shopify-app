@@ -4,7 +4,8 @@
   "description": "A serverless Shopify App",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "isomorphic-fetch": "^2.2.1",
     "netlify-lambda": "^1.6.3",
     "yarn": "^1.22.0"
   },
