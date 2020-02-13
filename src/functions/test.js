@@ -10,6 +10,7 @@ exports.handler = async (event, context) => {
   if (signature) {
     const map = { path_prefix, shop, timestamp }
     const message = querystring.stringify(map)
+    console.log(message)
     const providedHmac = Buffer.from(signature, 'utf-8')
     const generatedHash = Buffer.from(
       crypto
