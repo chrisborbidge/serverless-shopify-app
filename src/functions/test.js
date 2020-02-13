@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
   console.log(params)
 
   if (shop && path_prefix && timestamp) {
-    const map = { shop, path_prefix, timestamp }
+    const map = { path_prefix, shop, timestamp }
     const message = querystring.stringify(map)
     const providedHmac = Buffer.from(signature, 'utf-8')
     const generatedHash = Buffer.from(
