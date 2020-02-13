@@ -11,7 +11,7 @@ exports.handler = async (event, context) => {
     var parameters = [];
     for (var key in params) {
       if (key != 'signature') {
-        parameters.push(key + '=' + query[key])
+        parameters.push(key + '=' + params[key])
       }
     }
     var message = parameters.sort().join('');
