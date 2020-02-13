@@ -1,6 +1,8 @@
 const crypto = require("crypto")
 exports.handler = async (event, context) => {
-  const params = event.queryStringParameters
+  const shop = event.queryStringParameters.shop
+  const path_prefix = event.queryStringParameters.path_prefix
+  const timestamp = event.queryStringParameters.timestamp
 
   if (shop && path_prefix && timestamp) {
     const map = { shop, path_prefix, timestamp }
