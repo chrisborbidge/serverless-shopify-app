@@ -38,9 +38,7 @@ exports.handler = async (event, context) => {
     if (!hashEquals) {
       return {
         statusCode: 400,
-        body: JSON.stringify({
-          params: event.queryStringParameters
-        })
+        body: "HMAC validation error"
       }
     }
 
