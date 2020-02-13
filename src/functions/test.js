@@ -4,6 +4,7 @@ const querystring = require("querystring")
 
 exports.handler = async (event, context) => {
   const params = event.queryStringParameters
+  const shop = event.queryStringParameters.shop
   const apiSecret = process.env.SHOPIFY_API_SECRET
 
   if (shop && path_prefix && timestamp) {
