@@ -1,4 +1,5 @@
 const crypto = require("crypto")
+const querystring = require("querystring")
 exports.handler = async (event, context) => {
   const shop = event.queryStringParameters.shop
   const path_prefix = event.queryStringParameters.path_prefix
