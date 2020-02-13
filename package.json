@@ -1,0 +1,22 @@
+{
+  "name": "serverless-shopify-app",
+  "version": "1.0.0",
+  "description": "A serverless Shopify App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisborbidge/serverless-shopify-app.git"
+  },
+  "author": "Chris Borbidge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisborbidge/serverless-shopify-app/issues"
+  },
+  "homepage": "https://github.com/chrisborbidge/serverless-shopify-app#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
