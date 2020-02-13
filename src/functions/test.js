@@ -7,9 +7,6 @@ exports.handler = async (event, context) => {
   const apiSecret = process.env.SHOPIFY_API_SECRET
 
   if (shop && path_prefix && timestamp) {
-    const map = { path_prefix, shop, timestamp }
-    const message = querystring.stringify(map)
-
     var parameters = [];
     for (var key in query) {
       if (key != 'signature') {
