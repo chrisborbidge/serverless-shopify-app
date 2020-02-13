@@ -18,6 +18,9 @@ exports.handler = async (event, context) => {
       'utf-8'
     )
 
+    console.log(providedHmac)
+    console.log(generatedHash)
+
     let hashEquals = false
 
     try {
