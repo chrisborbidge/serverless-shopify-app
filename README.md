@@ -5,7 +5,7 @@ A serverless Shopify App
 
 ### Setup
 
-1. Sign up for a Shopify Partners account (here)[https://www.shopify.com/partners]
+1. Sign up for a Shopify Partners account [here](https://www.shopify.com/partners)
 2. Log in
 3. Click "Apps" in the left hand side menu
 4. Click "Create app"
@@ -38,8 +38,6 @@ app_name
 ```
 {{netlify_url}}/.netlify/functions
 ```
-
-
 
 
 ### Proxy URL
