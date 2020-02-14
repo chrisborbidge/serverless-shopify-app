@@ -70,7 +70,7 @@ SHOPIFY_API_SECRET = YOUR SHOPIFY API SECRET
 
 ### Proxy URL
 
-When installed on a Shopify Store, endpoints can be accessed using the following URL structure:
+When installed on a Shopify Store, proxied endpoints can be accessed from the Shopify stores front end by using the following URL structure:
 
 ```
 {{shopify_url}}/apps/serverless/{{endpoint}}
