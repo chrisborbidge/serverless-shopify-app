@@ -3,9 +3,9 @@ A serverless Shopify App
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2e1d6a73-a647-416a-be8f-6151215446b4/deploy-status)](https://app.netlify.com/sites/shopify-serverless-app/deploys)
 
-### Setup
+### Shopify App Setup
 
-1. Sign up for a Shopify Partners account [here](https://www.shopify.com/partners)
+1. Sign up for a Shopify Partners account [here](https://www.shopify.com/partners).
 2. Log in
 3. Click "Apps" in the left hand side menu
 4. Click "Create app"
@@ -38,6 +38,34 @@ app_name
 ```
 {{netlify_url}}/.netlify/functions
 ```
+19. Click "< Your App Name"
+20. Take note of where to find your API key and API secret key, these will be needed later
+
+
+### Deployment (Netlify)
+
+1. Sign up for a Netlify account [here](https://www.netlify.com/).
+2. Click "New site from Git"
+3. Click "GitHub" (or other)
+4. Select your clone of this Repo
+5. Click "Show advanced"
+6. Click "New variable"
+7. Add the following variables:
+```
+SHOPIFY_API_KEY = YOUR SHOPIFY API KEY
+SHOPIFY_API_SECRET = YOUR SHOPIFY API SECRET
+```
+8. Click "Deploy site"
+
+
+### Install App on Shopify Store
+
+1. Enter the following URL into a web browser:
+```
+{{netlify_url}}/.netlify/functions/app?shop={{shopify_store_url}}&redirect={{netlify_url}}/.netlify/functions/app
+```
+2. Copy the "redirectTo" url and paste it into your browser
+3. Click "Install app"
 
 
 ### Proxy URL
