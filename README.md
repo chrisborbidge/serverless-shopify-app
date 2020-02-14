@@ -15,5 +15,5 @@ Whitelisted redirection URL(s) = {{netlify_url}}/.netlify/functions/token
 When installed on a Shopify Store, endpoints can be accessed using the following URL structure:
 
 ```
-{{shopify_url}}/apps/wishlist/{{endpoint}}
+{{shopify_url}}/apps/serverless/{{endpoint}}
 ```
